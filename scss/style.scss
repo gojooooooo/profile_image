@@ -1,12 +1,12 @@
 $main: #ce3645;
-$pink: #FCB5B5;
 
 body {
   background: #ddd;
 }
 
-.container,.best,
-.foot, .foot2,foot3,.face, .inner, .eye, .snout {
+.container,
+.arm1, .arm2, arm3,
+.foot, .foot2,.foot3,.face, .inner, .eye, .snout {
   position: absolute;
 }
 
@@ -20,15 +20,30 @@ body {
   height: 100px;
 }
 
+.arm1{
+    top: 120px;
+    left: -42px;
+    width: 55px;
+    height: 20px;
+    background: $main;
+    border-radius: 80%;
+    z-index: -1;
+}
+
+.arm1.right {
+  transform: translateX(227px) rotate(22deg);
+}
+
+
 .foot {
   top: 188px;
   left: -36px;
-  width: 100px;
+  width: 70px;
   height: 25px;
   border-radius: 44%;
   background: #000;
   transform: rotate(-22deg);
-  z-index:-1;
+  z-index:0;
 }
 
 
@@ -43,22 +58,25 @@ body {
 }
 
 .foot3{
-  top: 14px;
-  left: -58px;
+  top: 170px;
+  left: -52px;
   width: 70px;
   height: 40px;
   border-radius: 44%;
   transform: rotate(72deg);
-  border: 4px dotted #555;
+  border: 4px dotted #888;
 }
 .foot.right {
-  transform: translateX(180px) rotate(22deg);
+  transform: translateX(200px) rotate(22deg);
 }
-
 
 .foot2.right {
-  transform: translateX(250px) rotate(122deg);
+  transform: translateX(230px) rotate(122deg);
 }
+.foot3.right {
+  transform: translateX(230px) rotate(122deg);
+}
+
 .face {
   width: 200px;
   height: 188px;
@@ -72,19 +90,6 @@ body {
   height: 229px;
   border-radius: 100%;
   background: #ce3645;
-}
-
-.inner {
-  top: 8px;
-  left: 10px;
-  width: 50px;
-  height: 50px;
-  background: $pink;
-  border-radius: 1000%;
-}
-
-.inner.right {
-  left: 16px;
 }
 
 .blow {
@@ -116,34 +121,6 @@ body {
   transform: translateX(60px);
 }
 
-.snout {
-  top: 110px;
-  left: 80px;
-  width: 50px;
-  height: 45px;
-  background: #FDCFCF;
-  border-radius: 100%;
-}
-
-.nose {
-  position: absolute;
-  top: 4px;
-  left: 16px;
-  width: 15px;
-  height: 7px;
-  background: #333;
-  border-radius: 100%;
-}
-
-.bridge {
-  position: absolute;
-  top: 10px;
-  left: 23px;
-  width: 2px;
-  height: 13px;
-  background: #333;
-}
-
 .mouth {
   position: absolute;
   width: 120px;
@@ -172,25 +149,5 @@ body {
   width: 27px;
   height: 18px;
   background: #7FB7BE;
-  border-radius: 20px;
-}
-
-.mid {
-  position: absolute;
-  top: 3px;
-  left: 7px;
-  width: 12px;
-  height: 12px;
-  background: #F05D5E;
-  border-radius: 20px;
-}
-
-.ring {
-  position: absolute;
-  top: 5px;
-  left: 6px;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #F05D5E;
   border-radius: 20px;
 }
